@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "ShopEasy Online Store",
+    "category": "E-Commerce",
+    "filter": "web",
+    "description": "A full-featured e-commerce platform with product management, shopping cart, secure payments, and order tracking.",
+    "result": "Increased online sales by 180% with custom e-commerce platform and optimized checkout flow.",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+    "image": "assets/images/projects/shopeasy.jpg",
+    "year": 2025
+  },
+  {
+    "id": 2,
+    "title": "FinTrust Rebrand",
+    "category": "Corporate Branding",
+    "filter": "branding",
+    "description": "Complete brand identity redesign including logo, color palette, typography, and brand guidelines for a financial services company.",
+    "result": "65% increase in brand recognition and customer trust metrics.",
+    "technologies": ["Adobe Suite", "Figma", "Brand Strategy"],
+    "image": "assets/images/projects/fintrust.jpg",
+    "year": 2025
+  },
+  {
+    "id": 3,
+    "title": "HealthTrack App",
+    "category": "Mobile App",
+    "filter": "mobile",
+    "description": "Cross-platform health tracking mobile app with fitness monitoring, meal planning, and progress analytics.",
+    "result": "50K+ downloads in first quarter with 4.8-star rating on both app stores.",
+    "technologies": ["React Native", "Firebase", "HealthKit"],
+    "image": "assets/images/projects/healthtrack.jpg",
+    "year": 2025
+  },
+  {
+    "id": 4,
+    "title": "DataViz Analytics",
+    "category": "SaaS Platform",
+    "filter": "web",
+    "description": "Real-time analytics dashboard for businesses to track KPIs, generate reports, and visualize data.",
+    "result": "Serving 10K+ daily active users with 99.9% uptime.",
+    "technologies": ["Vue.js", "Python", "PostgreSQL", "D3.js"],
+    "image": "assets/images/projects/dataviz.jpg",
+    "year": 2024
+  },
+  {
+    "id": 5,
+    "title": "BrewCraft Coffee",
+    "category": "Brand Identity",
+    "filter": "branding",
+    "description": "Complete brand identity including logo design, packaging, signage, menu boards, and digital presence for a specialty coffee brand.",
+    "result": "Successfully launched 3 locations with consistent brand identity.",
+    "technologies": ["Illustrator", "Photoshop", "Print Design"],
+    "image": "assets/images/projects/brewcraft.jpg",
+    "year": 2024
+  },
+  {
+    "id": 6,
+    "title": "FastDelivery Pro",
+    "category": "Mobile App",
+    "filter": "mobile",
+    "description": "Delivery management application with real-time tracking, route optimization, and driver management features.",
+    "result": "Reduced dispatch time by 40% and increased delivery efficiency.",
+    "technologies": ["Flutter", "Google Maps API", "Node.js"],
+    "image": "assets/images/projects/fastdelivery.jpg",
+    "year": 2024
+  }
+]
