@@ -377,7 +377,7 @@
                         <div class="product-info">
                             <h4 class="product-name">Wireless Keyboard & Mouse Combo</h4>
                             <p class="product-price">₦10,000.99</p>
-                            <a href="shop.html" class="btn btn-sm btn-primary-custom">Add to Cart</a>
+                            <a href="https://wa.me/2347083474947?text=Hello%2C%20I%20want%20to%20order%20Wireless%20Keyboard%20%26%20Mouse%20Combo." class="btn btn-sm btn-primary-custom" target="_blank">Order</a>
                         </div>
                     </div>
                 </div>
@@ -392,7 +392,7 @@
                         <div class="product-info">
                             <h4 class="product-name">USB-C Hub 7-in-1 & Charging Station</h4>
                             <p class="product-price"><span class="old-price">₦5,990.99</span> ₦3,990.99</p>
-                            <a href="shop.html" class="btn btn-sm btn-primary-custom">Add to Cart</a>
+                            <a href="https://wa.me/2347083474947?text=Hello%2C%20I%20want%20to%20order%20USB-C%20Hub%207-in-1%20%26%20Charging%20Station." class="btn btn-sm btn-primary-custom" target="_blank">Order</a>
                         </div>
                     </div>
                 </div>
@@ -406,7 +406,7 @@
                         <div class="product-info">
                             <h4 class="product-name">Noise Cancelling Headphones</h4>
                             <p class="product-price">₦8,990.99</p>
-                            <a href="shop.html" class="btn btn-sm btn-primary-custom">Add to Cart</a>
+                            <a href="https://wa.me/2347083474947?text=Hello%2C%20I%20want%20to%20order%20Noise%20Cancelling%20Headphones." class="btn btn-sm btn-primary-custom" target="_blank">Order</a>
                         </div>
                     </div>
                 </div>
@@ -421,7 +421,7 @@
                         <div class="product-info">
                             <h4 class="product-name">4K Webcam with Microphone</h4>
                             <p class="product-price">₦6,990.99</p>
-                            <a href="shop.html" class="btn btn-sm btn-primary-custom">Add to Cart</a>
+                            <a href="https://wa.me/2347083474947?text=Hello%2C%20I%20want%20to%20order%204K%20Webcam%20with%20Microphone." class="btn btn-sm btn-primary-custom" target="_blank">Order</a>
                         </div>
                     </div>
                 </div>
@@ -505,7 +505,7 @@
                                     <p class="testimonial-text">"BunioX Tech transformed our online presence completely. Their team delivered a stunning website and branding package that exceeded our expectations. Highly recommended!"</p>
                                     <div class="testimonial-author mt-4">
                                         <div class="author-avatar">
-                                            <img src="assets/images/team/images.jpg" alt="Sarah Johnson">
+                                            <span class="author-icon"><i class="bi bi-person-circle"></i></span>
                                         </div>
                                         <h5 class="author-name mb-0">Ahmad Adam</h5>
                                         <p class="author-role text-muted mb-0">CEO, TechVentures Inc.</p>
@@ -528,7 +528,7 @@
                                     <p class="testimonial-text">"The digital skills training program was life-changing. I went from zero coding knowledge to landing my first developer job within 6 months. The instructors are world-class!"</p>
                                     <div class="testimonial-author mt-4">
                                         <div class="author-avatar">
-                                            <img src="assets/images/team/images.jpg" alt="Michael Chen">
+                                            <span class="author-icon"><i class="bi bi-person-circle"></i></span>
                                         </div>
                                         <h5 class="author-name mb-0">Michael Chen</h5>
                                         <p class="author-role text-muted mb-0">Junior Developer, Graduate</p>
@@ -551,7 +551,7 @@
                                     <p class="testimonial-text">"Professional, reliable, and incredibly talented. BunioX Tech delivered our e-commerce platform ahead of schedule and the results speak for themselves - 180% sales increase!"</p>
                                     <div class="testimonial-author mt-4">
                                         <div class="author-avatar">
-                                            <img src="assets/images/team/images.jpg" alt="Amanda Peters">
+                                            <span class="author-icon"><i class="bi bi-person-circle"></i></span>
                                         </div>
                                         <h5 class="author-name mb-0">Amanda Peters</h5>
                                         <p class="author-role text-muted mb-0">Founder, ShopEasy</p>
@@ -653,36 +653,45 @@
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="contact-form-card p-4 p-md-5">
-                        <form id="contactForm" novalidate>
+                        <form id="contactForm" action="https://formspree.io/f/mojrpgoo" method="POST" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="contactName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="contactName" placeholder="John Doe" required>
+                                    <input type="text" class="form-control" id="contactName" name="name" placeholder="John Doe" required>
                                     <div class="invalid-feedback">Please enter your name</div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="contactEmail" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="contactEmail" placeholder="john@example.com" required>
+                                    <input type="email" class="form-control" id="contactEmail" name="email" placeholder="john@example.com" required>
                                     <div class="invalid-feedback">Please enter a valid email</div>
                                 </div>
                                 <div class="col-12">
+                                    <label for="contactPhone" class="form-label">Phone (Optional)</label>
+                                    <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="+2347087834749">
+                                </div>
+                                <div class="col-12">
                                     <label for="contactSubject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="contactSubject" placeholder="How can we help?">
+                                    <select class="form-control" id="contactSubject" name="subject">
+                                        <option value="">Select a topic</option>
+                                        <option value="software">Software Development</option>
+                                        <option value="branding">Business Branding</option>
+                                        <option value="training">Digital Training</option>
+                                        <option value="shop">Tech Accessories</option>
+                                        <option value="other">Other Inquiry</option>
+                                    </select>
                                 </div>
                                 <div class="col-12">
                                     <label for="contactMessage" class="form-label">Message</label>
-                                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Tell us about your project or inquiry..." required></textarea>
+                                    <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Tell us about your project or inquiry..." required></textarea>
                                     <div class="invalid-feedback">Please enter your message</div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary-custom btn-lg w-100">
-                                        <i class="bi bi-send me-2"></i>Send Message
-                                    </button>
+                                    <button type="submit" class="btn btn-primary-custom btn-lg w-100"><i class="bi bi-send me-2"></i>Send Message</button>
                                 </div>
                             </div>
                         </form>
-                        <div id="formSuccess" class="alert alert-success mt-3 d-none">
-                            <i class="bi bi-check-circle me-2"></i>Thank you! Your message has been sent successfully.
+                        <div id="formError" class="alert alert-danger mt-3 d-none">
+                            <i class="bi bi-exclamation-circle me-2"></i>Unable to send your message right now. Please try again later.
                         </div>
                     </div>
                 </div>
@@ -690,13 +699,26 @@
         </div>
     </section>
 
+    <div id="contactSuccessModal" class="d-none" style="position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:1050; display:flex; align-items:center; justify-content:center; padding:1rem;">
+        <div style="background:#fff; max-width:420px; width:100%; border-radius:1rem; box-shadow:0 24px 60px rgba(0,0,0,0.18); padding:2rem; position:relative;">
+            <button type="button" id="contactSuccessClose" style="position:absolute; top:1rem; right:1rem; border:none; background:transparent; font-size:1.25rem; color:#4b5563; cursor:pointer;">&times;</button>
+            <div class="text-center">
+                <div class="badge rounded-circle bg-success text-white mb-3" style="width:60px; height:60px; display:grid; place-items:center; margin-inline:auto;">
+                    <i class="bi bi-check-lg fs-4"></i>
+                </div>
+                <h4 class="mb-2">Message Sent</h4>
+                <p class="text-muted mb-0">Thank you for reaching out to BunioX Tech Solutions — we will get back to you soon.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer-section">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-brand mb-3">
-                        <span class="brand-icon"><i class="bi bi-box-seam-fill"></i></span>
+                        <span class="brand-icon"><img src="assets/images/logo/BunioX.jpg" alt="BunioX Tech Logo" class="brand-logo"></span>
                         <span class="brand-text">Bunio<span class="text-accent">X</span> Tech</span>
                     </div>
                     <p class="footer-text">Empowering businesses and youth through innovative digital solutions, quality tech products, and comprehensive training programs.</p>
@@ -737,11 +759,11 @@
                         </li>
                         <li class="d-flex align-items-start mb-2">
                             <i class="bi bi-telephone me-2 mt-1"></i>
-                            <span>+234708783474947</span>
+                            <span>+2347083474947</span>
                         </li>
                         <li class="d-flex align-items-start mb-2">
                             <i class="bi bi-envelope me-2 mt-1"></i>
-                            <span>hello@bunioxtech.com</span>
+                            <span>info@bunioxtech.com</span>
                         </li>
                     </ul>
                 </div>

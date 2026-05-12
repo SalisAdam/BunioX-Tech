@@ -47,28 +47,28 @@
                     <div class="contact-info-card text-center p-4">
                         <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
                         <h5>Phone</h5>
-                        <p class="text-muted mb-0">+2347087834749</p>
+                        <p class="text-muted mb-0">+2347083474947</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="contact-info-card text-center p-4">
                         <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
                         <h5>Email</h5>
-                        <p class="text-muted mb-0">hello@bunioxtech.com</p>
+                        <p class="text-muted mb-0">info@bunioxtech.com</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="contact-info-card text-center p-4">
                         <div class="contact-info-icon"><i class="bi bi-whatsapp"></i></div>
                         <h5>WhatsApp</h5>
-                        <p class="text-muted mb-0">+2347087834749</p>
+                        <p class="text-muted mb-0">+2347083474947</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="contact-info-card text-center p-4">
                         <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
                         <h5>Location</h5>
-                        <p class="text-muted mb-0">123 Tech Avenue, Damaturu, Yobe State</p>
+                        <p class="text-muted mb-0">Damaturu, Yobe State. Nigeria</p>
                     </div>
                 </div>
             </div>
@@ -78,25 +78,25 @@
                 <div class="col-lg-7" data-aos="fade-right">
                     <div class="contact-form-card p-4 p-md-5">
                         <h3 class="mb-4">Send Us a Message</h3>
-                        <form id="contactForm" novalidate>
+                        <form id="contactForm" action="https://formspree.io/f/mojrpgoo" method="POST" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="contactName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="contactName" placeholder="John Doe" required>
+                                    <input type="text" class="form-control" id="contactName" name="name" placeholder="John Doe" required>
                                     <div class="invalid-feedback">Please enter your name</div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="contactEmail" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="contactEmail" placeholder="john@example.com" required>
+                                    <input type="email" class="form-control" id="contactEmail" name="email" placeholder="john@example.com" required>
                                     <div class="invalid-feedback">Please enter a valid email</div>
                                 </div>
                                 <div class="col-12">
                                     <label for="contactPhone" class="form-label">Phone (Optional)</label>
-                                    <input type="tel" class="form-control" id="contactPhone" placeholder="+2347087834749">
+                                    <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="+2347087834749">
                                 </div>
                                 <div class="col-12">
                                     <label for="contactSubject" class="form-label">Subject</label>
-                                    <select class="form-control" id="contactSubject">
+                                    <select class="form-control" id="contactSubject" name="subject">
                                         <option value="">Select a topic</option>
                                         <option value="software">Software Development</option>
                                         <option value="branding">Business Branding</option>
@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="contactMessage" class="form-label">Message</label>
-                                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Tell us about your project or inquiry..." required></textarea>
+                                    <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Tell us about your project or inquiry..." required></textarea>
                                     <div class="invalid-feedback">Please enter your message</div>
                                 </div>
                                 <div class="col-12">
@@ -115,7 +115,9 @@
                                 </div>
                             </div>
                         </form>
-                        <div id="formSuccess" class="alert alert-success mt-3 d-none"><i class="bi bi-check-circle me-2"></i>Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</div>
+                        <div id="formError" class="alert alert-danger mt-3 d-none">
+                            <i class="bi bi-exclamation-circle me-2"></i>Unable to send your message right now. Please try again later.
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5" data-aos="fade-left">
@@ -139,7 +141,7 @@
                         <div class="mt-4 p-4 bg-light rounded">
                             <h5 class="mb-2">Quick Response</h5>
                             <p class="text-muted small mb-0">For urgent inquiries, reach us via WhatsApp for the fastest response.</p>
-                            <a href="https://wa.me/2347087834749" class="btn btn-success btn-sm mt-3" target="_blank"><i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp</a>
+                            <a href="https://wa.me/2347083474947?text=Hello%20BunioX%20Tech%20Solutions%2C%20i%20would%20like%20to%20know%20more%20about%20your%20services." class="btn btn-success btn-sm mt-3" target="_blank"><i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -156,17 +158,30 @@
         </div>
     </section>
 
+    <div id="contactSuccessModal" class="d-none" style="position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:1050; display:flex; align-items:center; justify-content:center; padding:1rem;">
+        <div style="background:#fff; max-width:420px; width:100%; border-radius:1rem; box-shadow:0 24px 60px rgba(0,0,0,0.18); padding:2rem; position:relative;">
+            <button type="button" id="contactSuccessClose" style="position:absolute; top:1rem; right:1rem; border:none; background:transparent; font-size:1.25rem; color:#4b5563; cursor:pointer;">&times;</button>
+            <div class="text-center">
+                <div class="badge rounded-circle bg-success text-white mb-3" style="width:60px; height:60px; display:grid; place-items:center; margin-inline:auto;">
+                    <i class="bi bi-check-lg fs-4"></i>
+                </div>
+                <h4 class="mb-2">Message Sent</h4>
+                <p class="text-muted mb-0">Thank you for reaching out to BunioX Tech Solutions — we will get back to you soon.</p>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer-section">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="footer-brand mb-3"><span class="brand-icon"><i class="bi bi-box-seam-fill"></i></span><span class="brand-text">Bunio<span class="text-accent">X</span> Tech</span></div>
+                    <div class="footer-brand mb-3"><span class="brand-icon"><img src="assets/images/logo/BunioX.jpg" alt="BunioX Tech Logo" class="brand-logo"></span><span class="brand-text">Bunio<span class="text-accent">X</span> Tech</span></div>
                     <p class="footer-text">Empowering businesses and youth through innovative digital solutions.</p>
                     <div class="footer-social mt-3"><a href="#" class="footer-social-link"><i class="bi bi-facebook"></i></a><a href="#" class="footer-social-link"><i class="bi bi-twitter-x"></i></a><a href="#" class="footer-social-link"><i class="bi bi-linkedin"></i></a><a href="#" class="footer-social-link"><i class="bi bi-instagram"></i></a></div>
                 </div>
                 <div class="col-lg-2 col-md-6"><h5 class="footer-title">Quick Links</h5><ul class="footer-links list-unstyled"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
                 <div class="col-lg-3 col-md-6"><h5 class="footer-title">Services</h5><ul class="footer-links list-unstyled"><li><a href="services.html">Software Development</a></li><li><a href="services.html">Business Branding</a></li><li><a href="shop.html">Tech Accessories</a></li><li><a href="training.html">Digital Training</a></li></ul></div>
-                <div class="col-lg-3 col-md-6"><h5 class="footer-title">Contact Info</h5><ul class="footer-contact list-unstyled"><li class="d-flex align-items-start mb-2"><i class="bi bi-geo-alt me-2 mt-1"></i><span>123 Tech Avenue, Damaturu, Yobe State</span></li><li class="d-flex align-items-start mb-2"><i class="bi bi-telephone me-2 mt-1"></i><span>+2347087834749</span></li><li class="d-flex align-items-start mb-2"><i class="bi bi-envelope me-2 mt-1"></i><span>hello@bunioxtech.com</span></li></ul></div>
+                <div class="col-lg-3 col-md-6"><h5 class="footer-title">Contact Info</h5><ul class="footer-contact list-unstyled"><li class="d-flex align-items-start mb-2"><i class="bi bi-geo-alt me-2 mt-1"></i><span>123 Tech Avenue, Damaturu, Yobe State</span></li><li class="d-flex align-items-start mb-2"><i class="bi bi-telephone me-2 mt-1"></i><span>+2347083474947</span></li><li class="d-flex align-items-start mb-2"><i class="bi bi-envelope me-2 mt-1"></i><span>info@bunioxtech.com</span></li></ul></div>
             </div>
             <hr class="footer-divider">
             <div class="row align-items-center">

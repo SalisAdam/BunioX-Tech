@@ -171,8 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
             let isValid = true;
 
             // Name validation
@@ -206,23 +204,65 @@ document.addEventListener('DOMContentLoaded', function () {
                 messageInput.classList.add('is-valid');
             }
 
-            // Show success message if valid
-            if (isValid) {
-                const successMsg = document.getElementById('formSuccess');
-                if (successMsg) {
-                    successMsg.classList.remove('d-none');
-                }
-                contactForm.reset();
+            const successMsg = document.getElementById('formSuccess');
+            const errorMsg = document.getElementById('formError');
 
-                // Remove validation classes after reset
-                setTimeout(() => {
+            if (!isValid) {
+                e.preventDefault();
+                if (successMsg) successMsg.classList.add('d-none');
+                return;
+            }
+
+            if (contactForm.action && contactForm.action.includes('formspree.io')) {
+                e.preventDefault();
+
+                if (successMsg) successMsg.classList.add('d-none');
+                if (errorMsg) errorMsg.classList.add('d-none');
+
+                const formData = new FormData(contactForm);
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Submission failed');
+                    }
+                    return response.json();
+                })
+                .then(() => {
+                    const modal = document.getElementById('contactSuccessModal');
+                    if (modal) {
+                        modal.classList.remove('d-none');
+                    }
+                    contactForm.reset();
                     document.querySelectorAll('.is-valid').forEach(el => {
                         el.classList.remove('is-valid');
                     });
-                    successMsg.classList.add('d-none');
-                }, 5000);
+                })
+                .catch(() => {
+                    if (errorMsg) {
+                        errorMsg.classList.remove('d-none');
+                    }
+                });
             }
         });
+
+        const closeButton = document.getElementById('contactSuccessClose');
+        const successModal = document.getElementById('contactSuccessModal');
+        if (closeButton && successModal) {
+            closeButton.addEventListener('click', function () {
+                successModal.classList.add('d-none');
+            });
+            successModal.addEventListener('click', function (event) {
+                if (event.target === successModal) {
+                    successModal.classList.add('d-none');
+                }
+            });
+        }
 
         // Real-time validation feedback
         const inputs = contactForm.querySelectorAll('input, textarea');
