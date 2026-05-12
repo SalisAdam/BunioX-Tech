@@ -224,7 +224,7 @@
     right: 20px;
     z-index: 2;
     padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--bg-white);
     backdrop-filter: blur(10px);
     border-radius: var(--radius-md);
     display: flex;
@@ -368,7 +368,7 @@
 
 /* Alternating section backgrounds */
 .service-section:nth-child(even) {
-    background: linear-gradient(135deg, #f8faff 0%, #f0f4f8 100%);
+    background: var(--bg-light);
     border-radius: var(--radius-xl);
     padding: 50px 30px;
     margin-left: -15px;

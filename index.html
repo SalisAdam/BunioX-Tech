@@ -31,6 +31,9 @@
                 <img src="assets/images/logo/BunioX.jpg" alt="BunioX Tech Logo" class="brand-logo">
                 <span class="brand-text">Bunio<span class="text-accent">X</span> Tech</span>
             </a>
+            <button class="night-mode-toggle d-lg-none" aria-label="Toggle night mode">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,6 +47,9 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
+                <button class="night-mode-toggle d-none d-lg-inline-flex" aria-label="Toggle night mode">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
                 <a href="contact.html" class="btn btn-primary-custom">Get Started</a>
             </div>
         </div>
@@ -699,8 +705,8 @@
     </section>
 
     <div id="contactSuccessModal" class="d-none" style="position:fixed; inset:0; background:rgba(15,23,42,0.7); z-index:1050; display:flex; align-items:center; justify-content:center; padding:1rem;">
-        <div style="background:#fff; max-width:420px; width:100%; border-radius:1rem; box-shadow:0 24px 60px rgba(0,0,0,0.18); padding:2rem; position:relative;">
-            <button type="button" id="contactSuccessClose" style="position:absolute; top:1rem; right:1rem; border:none; background:transparent; font-size:1.25rem; color:#4b5563; cursor:pointer;">&times;</button>
+        <div style="background:var(--bg-white); max-width:420px; width:100%; border-radius:1rem; box-shadow:0 24px 60px rgba(0,0,0,0.18); padding:2rem; position:relative;">
+            <button type="button" id="contactSuccessClose" style="position:absolute; top:1rem; right:1rem; border:none; background:transparent; font-size:1.25rem; color:var(--text-light); cursor:pointer;">&times;</button>
             <div class="text-center">
                 <div class="badge rounded-circle bg-success text-white mb-3" style="width:60px; height:60px; display:grid; place-items:center; margin-inline:auto;">
                     <i class="bi bi-check-lg fs-4"></i>

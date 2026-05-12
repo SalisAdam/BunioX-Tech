@@ -19,6 +19,30 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleNavbarScroll);
     handleNavbarScroll();
 
+    // ==================== NIGHT MODE TOGGLE ====================
+    const savedTheme = localStorage.getItem('buniox-theme');
+
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('buniox-theme', theme);
+        document.querySelectorAll('.night-mode-toggle i').forEach(icon => {
+            icon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+        });
+    }
+
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        applyTheme('dark');
+    }
+
+    document.querySelectorAll('.night-mode-toggle').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const current = document.documentElement.getAttribute('data-theme');
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+    });
+
     // ==================== SMOOTH SCROLLING ====================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
