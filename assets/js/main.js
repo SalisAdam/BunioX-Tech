@@ -1,5 +1,5 @@
 /* ============================================
-   BunioX Tech Solutions - Main JavaScript
+   BunioX - Main JavaScript
    Handles: Navbar, Animations, Forms, Counters
    ============================================ */
 
