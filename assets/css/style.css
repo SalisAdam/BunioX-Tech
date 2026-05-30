@@ -1898,4 +1898,79 @@ html {
     .cta-buttons .btn {
         width: 100%;
     }
+
+    .navbar-brand .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-brand .brand-name {
+        font-size: 0.95rem;
+    }
+
+    .navbar-brand .brand-subtitle {
+        font-size: 0.6rem;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-toggler {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-brand {
+        gap: 8px;
+    }
+
+    .navbar-brand .brand-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .navbar-brand .brand-name {
+        font-size: 0.85rem;
+    }
+
+    .navbar-brand .brand-subtitle {
+        font-size: 0.55rem;
+    }
+
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .navbar-toggler {
+        padding: 4px;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.2em;
+        height: 1.2em;
+    }
+
+    .navbar-collapse {
+        padding: 12px;
+        margin-top: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 14px !important;
+        font-size: 0.9rem;
+    }
+
+    .navbar .btn-primary-custom {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .night-mode-toggle {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+        margin-left: 4px;
+    }
 }
